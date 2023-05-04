@@ -1,0 +1,19 @@
+#!name= NoAD
+#!desc= 广告屏蔽(mxdm8，YouTube)
+
+[URL Rewrite]
+
+# > yhdm - jmesp.eavd.cn,hnqwe.afcsbjkdws.com
+^https?:\/\/jmesp\.eavd\.cn - reject
+^https?:\/\/hnqwe\.afcsbjkdws\.com - reject
+
+
+[Map Local]
+
+# > YouTube 屏蔽广告
+https?:\/\/(?!((r\d-)|manifest))[\w-]+.googlevideo.com\/initplayback.+&oad data="TheTinygif.gif"
+
+# --- Block Ads End
+
+[MITM]
+hostname = jmesp.eavd.cn,hnqwe.afcsbjkdws.com,*.googlevideo.com
